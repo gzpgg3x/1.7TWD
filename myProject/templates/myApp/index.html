@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+{#<% load staticfiles %>#}
+{% load staticfiles %}
+{#{% load static %}#}
+
+<html>
+
+    <head>
+        <title>myApp</title>
+        {#<rel link = "{% static "css/bootsrap.css" %}" type = "stylesheet">#}
+        <link rel = "styleshee" href = "{% static "css/base.css" %}" />
+        {#<script link = "/static/js/query.js" type = "javascript"></script>#}
+        <sctipt src = "{% static "js/jquery.cs" %}"></script>      
+    </head>
+
+    <body>
+        <h1>myApp says...</h1>
+        hello world! <strong>{{ boldmessage }}</strong><br />
+
+        {% if categories %}
+	        {% for category in categories %}
+	            <ul>
+	                <a> {{ category.name }} </a>  
+
+	            </ul>
+	        {% endfor %}
+	    {% else %}    
+            <p> There is no category. </p>
+        {% endif %} 
+        <a href="/myApp/about/">About</a><br />
+        {#<img src = "{% static "images/Guoqiang1.jpg" %}" alt="Guoqiang Picture" />#}
+    </body>
+
+</html>

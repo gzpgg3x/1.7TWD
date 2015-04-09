@@ -21,8 +21,8 @@
         {% if categories %}
 	        {% for category in categories %}
 	            <ul>
-	                <a> {{ category.name }} </a>  
-
+	                {#<a href="/myApp/category/{{ category.name }}/"> {{ category.name }} </a>#}  
+                    <a href="/myApp/category/{{ category.slug }}/"> {{ category.name }} </a>
 	            </ul>
 	        {% endfor %}
 	    {% else %}    

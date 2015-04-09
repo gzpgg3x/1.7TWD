@@ -8,5 +8,8 @@ urlpatterns = patterns('',
     # url(r'^blog/', include('blog.urls')),
 
     # url(r'^admin/', include(admin.site.urls)),
-    url(r'^$', views.index, name="index"),    
+    url(r'^$', views.index, name="index"), 
+    # url(r'^/category/?P<slug>$/', views.category, name="category"),  
+    # url(r'^category/(?P<category_name_slug>[\w\-]+)/$', views.category, name="category"), 
+    url(r'^category/(?P<category_name_slug>[\w\-]+)/$', views.category, name='category'),  # New!   
 )
